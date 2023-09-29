@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Variables</title>
+</head>
+<body>
+    <h1>Swap Variables</h1>
+
+    <label for="variable1">Enter the first value:</label>
+    <input type="number" id="variable1"><br>
+
+    <label for="variable2">Enter the second value:</label>
+    <input type="number" id="variable2"><br>
+
+    <button onclick="swapVariables()">Swap</button>
+
+    <p id="result"></p>
+
+    <script>
+        function swapVariables() {
+            // Get the values of the two input fields
+            let value1 = parseFloat(document.getElementById("variable1").value);
+            let value2 = parseFloat(document.getElementById("variable2").value);
+
+            // Swap the values without using a third variable
+            value1 = value1 + value2;
+            value2 = value1 - value2;
+            value1 = value1 - value2;
+
+            // Display the swapped values
+            document.getElementById("result").textContent = `After swapping, the first value is: ${value1}, and the second value is: ${value2}`;
+        }
+    </script>
+</body>
+</html>

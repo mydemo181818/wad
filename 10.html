@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <h1>Palindrome Checker</h1>
+
+    <form id="palindromeForm">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString" required>
+        <button type="button" onclick="checkPalindrome()">Check</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        // function isPalindrome(str) {
+        //     const cleanStr = str.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+        //     const reversedStr = cleanStr.split("").reverse().join("");
+        //     return cleanStr === reversedStr;
+        // }
+
+        // function checkPalindrome() {
+        //     const inputString = document.getElementById("inputString").value;
+        //     const resultElement = document.getElementById("result");
+
+        //     if (isPalindrome(inputString)) {
+        //         resultElement.textContent = `"${inputString}" is a palindrome.`;
+        //     } else {
+        //         resultElement.textContent = `"${inputString}" is not a palindrome.`;
+        //     }
+        // }
+        function checkPalindrome() {
+            const inputString = document.getElementById("inputString").value.toLowerCase();
+            const resultElement = document.getElementById("result");
+
+            // Check if the input string is a palindrome
+            const reversedStr = inputString.split('').reverse().join('');
+            if (inputString === reversedStr) {
+                resultElement.textContent = `"${inputString}" is a palindrome.`;
+            } else {
+                resultElement.textContent = `"${inputString}" is not a palindrome.`;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and Time Display</title>
+</head>
+<body>
+   <h1>DATE AND TIME</h1>
+   <p id="result"></p>
+
+   <script>
+        function functionAane(){
+            const currentDateTime = new Date();
+            const date = currentDateTime.toLocaleDateString();
+            const time = currentDateTime.toLocaleTimeString();
+            document.getElementById("result").textContent = "Date: " + date + ", Time: " + time;
+        }
+        functionAane();
+        setInterval(functionAane, 1000);
+   </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Reverser</title>
+</head>
+<body>
+    <h1>String Reverser</h1>
+
+    <form id="stringForm">
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" name="inputString">
+        <button type="button" onclick="reverseString()">Reverse</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        // function reverseString() {
+        //     // Get the input string from the form
+        //     const inputString = document.getElementById("inputString").value;
+
+        //     // Initialize an empty string to store the reversed string
+        //     let reversedString = '';
+
+        //     // Iterate through the input string in reverse order
+        //     for (let i = inputString.length - 1; i >= 0; i--) {
+        //         // Add each character to the reversed string
+        //         reversedString += inputString[i];
+        //     }
+
+        //     // Display the reversed string
+        //     document.getElementById("result").textContent = `Reversed String: ${reversedString}`;
+        // }
+        function reverseString(){
+            var inputString=document.getElementById("inputString").value;
+            var temp='';
+            for(var i=inputString.length-1;i>=0;i--){
+                temp=temp+inputString[i];
+            }
+            document.querySelector("p").textContent="new is "+temp
+        }
+    </script>
+</body>
+</html>

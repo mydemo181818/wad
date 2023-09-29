@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Square Area</title>
+</head>
+<body>
+    <h1>Calculate Square Area</h1>
+
+    <label for="sideLength">Enter the length of one side of the square:</label>
+    <input type="number" id="sideLength"><br>
+
+    <button onclick="calculateArea()">Calculate Area</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculateArea() {
+            // Get the length of one side from the input field
+            const sideLength = parseFloat(document.getElementById("sideLength").value);//parse float converts a string into float if a user inputs any
+
+            // Check if the input is a valid number
+            if (!isNaN(sideLength)) {//is not a number
+                // Calculate the area of the square
+                const area = sideLength * sideLength;
+
+                // Display the result
+                document.getElementById("result").textContent = `The area of the square is: ${area}`;
+            } else {
+                // Display an error message if the input is not a valid number
+                document.getElementById("result").textContent = "Invalid input. Please enter a valid number.";
+            }
+        }
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="sideLength">Enter a side</label>
+    <input type="number" id="sideLength">
+    <button onclick="areaFuntion()">click</button>
+    <p id="result"></p>
+
+    <script>
+        function areaFuntion(){
+            const a=parseFloat(document.getElementById("sideLength").value);
+            if(!isNaN(a)){
+                const area=a*a;
+                document.getElementById("result").textContent="area is"+area;
+            }
+            else{
+                document.getElementById("result").textContent="invalid text";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter name</label>
+    <input type="text" name="" id="name">
+    <label for="age">Enter age</label>
+    <input type="number" name="" id="age">
+    <button onclick="functionAanu()" id="check">check</button>
+    <p id="result"></p>
+
+    <script>
+        function functionAanu(){
+            const name=parseFloat(document.getElementById("name").value);
+            const age=parseFloat(document.getElementById("age").value);
+            if(age>=18){
+                document.getElementById("result").textContent="you are eligible"
+            }
+            else{
+                document.getElementById("result").textContent="you are not eligible"
+
+            }
+        }
+    </script>
+</body>
+</html>

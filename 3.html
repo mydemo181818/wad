@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="km">Enter kilometer</label>
+    <input type="number" name="" id="km">
+    <button onclick="funtionAane()" >submit</button>
+    <p id="result"></p>
+    
+    <script>
+        function funtionAane(){
+            const a=parseFloat(document.getElementById("km").value)
+            if(!isNaN(a)){
+                const cm=a*1000;
+                document.getElementById("result").textContent="centimeter is "+cm;
+            }
+            else{
+                document.getElementById("result").textContent="invalid text"
+
+            }
+        }
+    </script>
+</body>
+</html>
